@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Important Links</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #fff;
+      --hover-bg: #f1f1f1;
+      --text-color: #000;
+      --card-bg: #f9f9f9;
+
+
+      --accent-color: #bfa145; /* dark gold */
+      
+      --default_gold: #d68a1a;
+      --active_gold: #bd7614;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      color: var(--default_gold);
+    }
+
+    .link-card {
+      background: var(--card-bg);
+      border: 1px solid var(--default_gold);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .link-card:hover {
+      background: var(--hover-bg);
+    }
+
+    .link-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .link-button {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--bg-color);
+      background-color: var(--default_gold);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .link-button:hover {
+      background-color: var(--active_gold);
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .fa-icon {
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Explore Our Links</h1>
+
+    <div class="link-card">
+      <div class="link-title">
+        <i class="fa-solid fa-globe fa-icon"></i>
+        Visit Our Website
+      </div>
+      <a class="link-button" href="https://yourwebsite.com" target="_blank">Go to Site</a>
+    </div>
+
+    <div class="link-card">
+      <div class="link-title">
+        <i class="fa-brands fa-whatsapp fa-icon"></i>
+        Join Our WhatsApp Channel
+      </div>
+      <a class="link-button" href="https://chat.whatsapp.com/your-invite-code" target="_blank">Join Now</a>
+    </div>
+
+    <div class="link-card">
+      <div class="link-title">
+        <i class="fa-solid fa-file-lines fa-icon"></i>
+        Looking for something?
+      </div>
+      <a class="link-button" href="https://forms.gle/your-form-link" target="_blank">Open Form</a>
+    </div>
+    <br><br>
+    <footer>
+      &copy; 2025 Havilah Acres
+    </footer>
+  </div>
+</body>
+</html>
