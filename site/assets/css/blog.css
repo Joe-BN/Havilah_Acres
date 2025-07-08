@@ -1,0 +1,134 @@
+
+/* ---------- Reset & Base ----------
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+/* ---------- Container ----------
+-------------------------------------------------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+/* ---------- Blog Section ----------
+-------------------------------------------------- */
+.blog-section {
+  padding: 4rem 0;
+  background: #fdfaf5;
+}
+.blog-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.post-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+.post-card:hover { transform: translateY(-5px); }
+.post-card img {
+  width: 96%;
+  height: auto;
+  align-self: center;
+  margin-top: 2%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+.post-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.post-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.post-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+.excerpt {
+  flex: 1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.read-more {
+  align-self: flex-start;
+  background: #d68a1a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.read-more:hover { background: #bd7614; }
+
+/* ---------- Footer ----------
+-------------------------------------------------- */
+.site-footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-left a, .footer-socials a {
+  color: #d68a1a;
+  transition: transform 0.2s;
+}
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+.footer-socials a:hover { transform: scale(1.2); }
+
+/* ---------- Responsive Menu ----------
+-------------------------------------------------- */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    width: 100%;
+    padding: 1rem;
+  }
+  .nav-container { position: relative; }
+}
+
+/* ---------- Mobile Nav Toggle ----------
+-------------------------------------------------- */
+/* will be handled in blog.js */

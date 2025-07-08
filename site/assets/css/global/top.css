@@ -1,0 +1,78 @@
+/*---Topbar---*/
+
+.topbar {
+  background-color: #d68a1a;
+  color: white;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+}
+.topbar .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.topbar span{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar img{
+  height: 12px;
+  width: auto;
+}
+
+
+/*--- Navbar ---*/
+.navbar {
+  background-color: #000;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.logo img {
+  height: 24px;
+}
+#nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+#nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+#nav-menu a:hover {
+  color: var(--active_gold);
+}
+.submit-btn button{
+  background-color: #d68a1a;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.submit-btn:hover,
+.submit-btn button:hover{
+  background-color: var(--active_gold);
+  border-radius: 6px;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}

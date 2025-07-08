@@ -1,0 +1,18 @@
+:root {
+  --default_gold: #d68a1a;
+  --active_gold: #bd7614;
+
+  --even_bg: #fff;
+  --odd_bg: #f6f6f6d2;
+}
+
+/*--- All titles ---s*/
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 2rem;
+  color: #222;
+  border-bottom: 3px solid var(--default_gold);
+  display: inline-block;
+}

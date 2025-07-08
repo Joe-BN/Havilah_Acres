@@ -1,10 +1,4 @@
-:root {
-  --default_gold: #d68a1a;
-  --active_gold: #bd7614;
-
-  --even_bg: #fff;
-  --odd_bg: #f6f6f6d2;
-}
+@import url("globals/global.css");
 
 * {
   margin: 0;
@@ -15,100 +9,9 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-
-/*------------------------*/
-/* --- common designs --- */
-/*------------------------*/
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0 auto 2rem;
-  color: #222;
-  border-bottom: 3px solid var(--default_gold);
-  display: inline-block;
-}
-/*-----------------------*/
-
-
-/*---Topbar---*/
-.topbar {
-  background-color: #d68a1a;
-  color: white;
-  padding: 0.5rem 0;
-  font-size: 0.9rem;
-}
-.topbar .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-}
-.topbar span{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.topbar img{
-  height: 12px;
-  width: auto;
-}
-
-
-/*---Navbar---*/
-.navbar {
-  background-color: #000;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-.logo {
-  font-size: .5rem;
-  font-weight: bold;
-}
-.logo img {
-  height: 24px;
-}
-#nav-menu {
-  display: flex;
-  gap: 1.5rem;
-}
-#nav-menu a {
-  color: white;
-  text-decoration: none;
-}
-.submit-btn button{
-  background-color: #d68a1a;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.submit-btn:hover,
-.submit-btn button:hover{
-  background-color: var(--active_gold);
-  border-radius: 6px;
-}
-
-/* Mobile menu toggle */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
 }
 
 
@@ -207,7 +110,6 @@ body, html {
   display: inline-block;
   background-color: var(--default_gold);
   color: white;
-  text-transform: uppercase;
   font-weight: bold;
   padding: 0.7rem 1.5rem;
   border: none;
@@ -223,11 +125,9 @@ body, html {
     flex-direction: column;
     text-align: center;
   }
-
   .about-text h2 {
     margin: 1rem auto;
   }
-
   .about-image img {
     max-width: 90%;
   }
@@ -243,8 +143,21 @@ body, html {
   font-weight: 380;
   font-size: 1.4rem;
 }
+.more_about_us .why_us {
+  margin: 2rem 4rem;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .more_about_us .why_us {
+    margin: 2rem 1.2rem;
+    text-align: left;
+  }
+}
+
+
 
 /*--- Our Services ---*/
+/*
 .services-section {
   background: #fff;
   padding: 4rem 2rem;
@@ -300,7 +213,7 @@ body, html {
   color: var(--default_gold);
   fill: var(--default_gold);
 }
-/* Dots */
+/ Dots /
 .slider-dots {
   margin-top: 1.5rem;
   display: flex;
@@ -317,6 +230,45 @@ body, html {
 .slider-dots .dot.active {
   background: var(--active_gold);
 }
+*/
+.services-section {
+  padding: 3rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.icon {
+  font-size: 2rem;
+  color: #d4932f;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.service-card img {
+ height: 3rem;
+ width: auto;
+}
+
 
 
 /*--- Featured ---*/
@@ -376,6 +328,9 @@ body, html {
   text-decoration: none;
   font-weight: 600;
 }
+.view-btn:hover {
+  background-color: var(--active_gold);
+}
 
 
 /*--- Contact form ---*/
@@ -427,58 +382,4 @@ body, html {
 }
 .submit-btn:hover {
   background-color: var(--active_gold);
-}
-
-
-/*--- footer ---*/
-.site-footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
-}
-
-.footer-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.footer-left {
-  text-align: left;
-}
-.footer-left a {
-  color: #d68a1a;
-  text-decoration: none;
-  font-weight: 500;
-}
-.footer-left a:hover {
-  text-decoration: underline;
-}
-.footer-socials {
-  display: flex;
-  gap: 1rem;
-  font-size: 1.8rem;
-}
-.footer-socials a img{
-  height: 3.5rem;
-  width: auto;
-  text-decoration: none;
-  transition: transform 1.4s ease;
-}
-.footer-socials a:hover {
-  transform: scale(1.25);
-}
-/* Responsive: Stack footer content on small screens */
-@media (max-width: 600px) {
-  .footer-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-left {
-    text-align: center;
-  }
 }
